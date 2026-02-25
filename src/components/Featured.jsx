@@ -26,7 +26,7 @@ const Featured = () => {
     }
 
     return (
-        <div className='flex flex-col items-center justify-center w-full mt-12 sm:mt-16 md:mt-20 lg:mt-24 px-4 sm:px-6 md:px-8'>
+        <div className='flex flex-col items-center justify-center w-full mt-12 sm:mt-16 md:mt-20 lg:mt-24 lg:px-35 px-5'>
             <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between w-full gap-4 mb-8 sm:mb-10'>
                 <div className='flex flex-col items-start justify-center'>
                     <h4 className='font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>Featured Products</h4>
