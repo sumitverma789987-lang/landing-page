@@ -22,6 +22,17 @@ const Categories = () => {
     const toggleLike = (index) => {
         setLiked(prev => ({ ...prev, [index]: !prev[index] }))
     }
+    const addToCart = (item) => {
+        const existingCart = JSON.parse(localStorage.getItem('cart')) || []
+        const cartItem = {
+            name: item.title,
+            price: item.price,
+            image: item.image,
+        }
+        existingCart.push(cartItem)
+        localStorage.setItem('cart', JSON.stringify(existingCart))
+
+    }
 
     return (
         <div className='flex flex-col items-center justify-center w-full mt-12 sm:mt-16 md:mt-20 lg:mt-24 lg:px-35 px-5'>
@@ -61,7 +72,8 @@ const Categories = () => {
                                 alt={item.title}
                             />
                             <div className='absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center'>
-                                <button className='bg-[#01C6B5] cursor-pointer text-white text-xs sm:text-sm md:text-base font-semibold px-4 sm:px-6 py-2 sm:py-3 hover:bg-[#00b39a] transition-colors'>
+                                <button className='bg-[#01C6B5] cursor-pointer text-white text-xs sm:text-sm md:text-base font-semibold px-4 sm:px-6 py-2 sm:py-3 hover:bg-[#00b39a] transition-colors' onClick={() => addToCart(item)}
+                                >
                                     Add to Cart
                                 </button>
                             </div>
