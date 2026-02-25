@@ -8,7 +8,7 @@ const Featured = () => {
     const [dimensions, setDimensions] = useState({ cardWidth: 364, cardHeight: 500, gap: 20 })
     const isSliding = useRef(false)
 
-    // Update dimensions on mount and resize
+
     useEffect(() => {
         const calculateDimensions = () => {
             const width = window.innerWidth

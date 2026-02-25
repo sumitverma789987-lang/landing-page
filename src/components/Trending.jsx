@@ -84,7 +84,7 @@ const Trending = () => {
                     {allCards.map((item, index) => (
                         <div
                             key={index}
-                            className='bg-white flex-shrink-0 flex flex-col border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow'
+                            className='bg-white flex-shrink-0 p-3 flex flex-col border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow'
                             style={{ width: `${cardWidth}px` }}
                         >
                             

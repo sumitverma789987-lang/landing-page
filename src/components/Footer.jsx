@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className='flex flex-row items-center gap-3 sm:gap-4 justify-start'>
                     <Youtube />
                     <Facebook />
-                    <div className='flex items-center justify-center border-[1.35px] border-white rounded-full p-2 sm:p-2.5'>
+                    <div className='flex items-center justify-center border-[1.35px] border-white rounded-full p-[8px]'>
                         <Twitter />
                     </div>
                     <Linkedin />

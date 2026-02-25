@@ -39,7 +39,7 @@ const Categories = () => {
                 {cards.map((item, index) => (
                     <div
                         key={index}
-                        className='bg-[#F5F5F5] flex flex-col cursor-pointer relative group rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow'
+                        className='bg-[#F5F5F5] flex flex-col cursor-pointer relative group overflow-hidden shadow-sm hover:shadow-md transition-shadow'
                     >
                         {item.sale && (
                             <div className='absolute top-2 sm:top-3 left-2 sm:left-3 bg-[#01C6B5] text-white text-xs sm:text-sm font-semibold px-2 sm:px-3 py-1 z-10 rounded'>

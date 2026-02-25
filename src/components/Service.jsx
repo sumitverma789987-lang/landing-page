@@ -26,7 +26,7 @@ const Service = () => {
                         description='Shop confidently with worldwide shipping and flexible return policies.'
                     />
 
-                    <div className='hidden xl:absolute xl:flex xl:top-1/4 xl:left-[300px]'>
+                    <div className='hidden xl:absolute min-[1400px]:flex xl:top-[10%] xl:left-[300px]'>
                         <Uparrow />
                     </div>
 
@@ -36,7 +36,7 @@ const Service = () => {
                         description='Your data is protected with encrypted, hassle-free payments.'
                     />
 
-                    <div className='hidden xl:absolute xl:flex xl:bottom-1/2 xl:right-[300px]  '>
+                    <div className='hidden xl:absolute min-[1400px]:flex xl:bottom-[60%] xl:right-[300px]  '>
                         <Downarrow />
                     </div>
 
