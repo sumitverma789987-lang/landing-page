@@ -52,7 +52,7 @@ const Trending = () => {
                 <div className='flex flex-row items-center justify-center gap-2 sm:gap-3 md:gap-5'>
                     <button
                         onClick={() => slide('prev')}
-                        className='group flex items-center justify-center hover:bg-[#01c6b5] hover:border-[#01c6b5] border-2 border-[#414143] px-3 sm:px-4 md:px-6 py-3 sm:py-4 md:py-5 rounded-full transition-colors'
+                        className='group flex items-center justify-center hover:bg-[#01c6b5] hover:border-[#01c6b5] border-2  opacity-65 px-3 sm:px-4 md:px-6 py-3 sm:py-4 md:py-5 rounded-full transition-colors'
                         aria-label='Previous slide'
                     >
                         <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +61,7 @@ const Trending = () => {
                     </button>
                     <button
                         onClick={() => slide('next')}
-                        className='group flex items-center justify-center hover:bg-[#01c6b5] hover:border-[#01c6b5] border-2 border-[#414143] px-3 sm:px-4 md:px-6 py-3 sm:py-4 md:py-5 rounded-full transition-colors'
+                        className='group flex items-center justify-center hover:bg-[#01c6b5] hover:border-[#01c6b5] border-2  opacity-65 px-3 sm:px-4 md:px-6 py-3 sm:py-4 md:py-5 rounded-full transition-colors'
                         aria-label='Next slide'
                     >
                         <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">

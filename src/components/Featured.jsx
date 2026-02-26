@@ -8,6 +8,16 @@ const Featured = () => {
     const [dimensions, setDimensions] = useState({ cardWidth: 364, cardHeight: 500, gap: 20 })
     const isSliding = useRef(false)
 
+  
+    useEffect(() => {
+        const storedLiked = JSON.parse(localStorage.getItem('liked')) || {}
+        setLiked(storedLiked)
+    }, [])
+
+     
+    useEffect(() => {
+        localStorage.setItem('liked', JSON.stringify(liked))
+    }, [liked])
 
     useEffect(() => {
         const calculateDimensions = () => {
