@@ -2,7 +2,10 @@ import React from 'react'
 
 const Newsletter = () => {
     return (
-        <div className='flex flex-col md:flex-row md:items-center justify-between bg-[#F1F1F1] mt-12  px-5 sm:mt-16 md:mt-20 lg:mt-24   gap-6 sm:gap-8 md:gap-0'>
+        <div className='w-full bg-[#F1F1F1]'>
+            <div className='max-w-[1440px] mx-auto w-full'>
+
+            <div className='flex flex-col md:flex-row md:items-center justify-between  mt-12  px-5 sm:mt-16 md:mt-20 lg:mt-24   gap-6 sm:gap-8 md:gap-0'>
             <img src="assets/Photo.png" alt='' className='hidden lg:block  object-contain' />
             <div className='flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-10 md:py-12 lg:py-16 flex-1'>
                 <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center leading-tight'> Subscribe To Our Newsletter</h1>
@@ -16,6 +19,8 @@ const Newsletter = () => {
                 </div>
             </div>
             <img src="assets/Bottle.png" className='hidden xl:block    h-auto object-contain' />
+        </div>
+            </div>
         </div>
     )
 }

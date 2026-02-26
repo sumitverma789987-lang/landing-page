@@ -3,7 +3,9 @@ import { Arrow, Facebook, Linkedin, Twitter, Whitearrow, Youtube } from './commo
 
 const Footer = () => {
     return (
-        <div className=' flex flex-col items-center justify-center  bg-[#414143] text-white '>
+        <div className='  bg-[#414143] w-full'>
+
+            <div className=' flex flex-col items-center max-w-[1440px] mx-auto w-full justify-center  text-white '>
 
         <div className='flex flex-col md:flex-row md:items-baseline md:justify-between p-6 sm:p-8 md:p-12 lg:p-16 w-full gap-8 md:gap-12 lg:gap-16'>
             <div className='flex flex-col items-start justify-center space-y-4 sm:space-y-5 md:space-y-6 flex-1'>
@@ -47,6 +49,7 @@ const Footer = () => {
             </div>
             <span className='h-[1px] w-full bg-white mb-7 bg-gradient-to-r from-transparent via-white/50 to-transparent '></span>
             <div className='mb-7 text-[14px] font-normal opacity-80'>Copyright © 2025 Yogalis. All Rights Reserved.</div>
+        </div>
         </div>
     )
 }

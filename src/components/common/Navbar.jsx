@@ -5,7 +5,9 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div className=' w-full flex flex-row  items-center bg-[#01C6B5] text-white justify-between py-2 px-5 lg:px-35 relative'>
+        <div className='  w-full bg-[#01C6B5] '>
+
+        <div className=' w-full  max-w-[1440px] mx-auto flex flex-row  items-center  text-white justify-between py-2 px-5 lg:px-35 relative'>
             <div className='flex items-center justify-center  '>
                 <img src="assets/Yogalis.png" alt="" />
             </div>
@@ -59,6 +61,7 @@ const Navbar = () => {
                 ></div>
             )}
         </div>
+    </div>
     )
 }
 

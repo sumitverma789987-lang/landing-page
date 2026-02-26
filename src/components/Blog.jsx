@@ -8,7 +8,7 @@ const cards = [
 
 const Blog = () => {
     return (
-        <div className='w-full flex items-center justify-center flex-col mt-12 sm:mt-16 md:mt-20 lg:mt-24 lg:px-35 px-5'>
+        <div className='w-full max-w-[1440px] mx-auto flex items-center justify-center flex-col mt-12 sm:mt-16 md:mt-20 lg:mt-24 lg:px-35 px-5'>
 
             <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between w-full mb-8 sm:mb-10 md:mb-12 gap-4 sm:gap-4'>
                 <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold'>From The Blog</h2>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Like } from './common/Icon'
 
 const cards = [
@@ -31,7 +31,7 @@ const Categories = () => {
         localStorage.setItem('cart', JSON.stringify(existingCart))
     }
     return (
-        <div className='flex flex-col items-center justify-center w-full mt-12 sm:mt-16 md:mt-20 lg:mt-24 lg:px-35 px-5'>
+        <div className='flex flex-col items-center max-w-[1440px] mx-auto justify-center w-full lg:mt-[140px] mt-20 lg:px-35 px-5'>
             <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between w-full mb-8 sm:mb-10 md:mb-12 gap-4 sm:gap-0'>
                 <div className='flex flex-col items-start justify-center'>
                     <h4 className='font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>Shop Our Categories</h4>

@@ -5,7 +5,7 @@ import { Dedicated, Downarrow, Global, Secure, Uparrow } from './common/Icon'
 
 const Service = () => {
     return (
-        <div className='w-full mt-12 sm:mt-16 md:mt-20 lg:mt-24 px-4 sm:px-6 md:px-8'>
+        <div className='w-full mt-12 max-w-[1440px] mx-auto sm:mt-16 md:mt-20 lg:mt-24 px-4 sm:px-6 md:px-8'>
             <div className='p-6 sm:p-8 md:p-10 lg:p-12'>
                 <h2 className='text-center  text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 sm:mb-10 md:mb-12 lg:mb-16'>Our Service Promise</h2>
 

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
     return (
-        <div className=' w-full flex flex-row  items-center justify-between p-3 px-5 lg:px-35 '>
+        <div className=' w-full flex   max-w-[1440px] mx-auto w-full flex-row  items-center justify-between p-3 px-5 lg:px-35 '>
             <div className='flex items-center justify-center flex-row gap-3'>
 
                 <Free />

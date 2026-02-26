@@ -76,8 +76,8 @@ const Featured = () => {
     const realIndex = ((current - cards.length) % cards.length + cards.length) % cards.length
 
     return (
-        <div className='flex flex-col items-center justify-center w-full mt-30  lg:px-35 px-5'>
-            <div className='flex flex-row items-center justify-between w-full gap-4 sm:gap-0 mb-8 sm:mb-10'>
+        <div className='flex flex-col items-center justify-center w-full max-w-[1440px] mx-auto mt-25 lg:mt-[130px]  lg:px-35 px-5'>
+            <div className='flex flex-row items-center justify-between w-full gap-4 sm:gap-0 mb-[50px] sm:mb-10'>
                 <div className='flex flex-col items-start justify-center'>
                     <h4 className='font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>Featured Products</h4>
                     <p className='font-normal text-sm sm:text-base md:text-lg text-[#414143] mt-1 sm:mt-2'>Use this area to describe the collection.</p>
@@ -105,7 +105,7 @@ const Featured = () => {
             </div>
 
             <div
-                className='mt-5 overflow-hidden w-full '
+                className=' overflow-hidden w-full '
                 style={{ width: `${cardWidth * 3 + gap * 2}px`, maxWidth: '100%' }}
             >
                 <div
@@ -136,7 +136,7 @@ const Featured = () => {
                             <div className='flex items-center justify-center flex-1 p-4 sm:p-6 md:p-10 relative'>
                                 <img src={item.image} alt={item.title} className='object-contain h-40 sm:h-48 md:h-64 lg:h-80 w-full' />
                                 <div className='absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center'>
-                                    <button className='bg-[#01C6B5] cursor-pointer text-white text-xs sm:text-sm md:text-base font-semibold px-4 sm:px-6 py-2 sm:py-3 hover:bg-[#00b39a] transition-colors' onClick={() => addToCart(item)}>
+                                    <button className='bg-[#01C6B5] cursor-pointer text-white text-xs sm:text-sm md:text-base font-semibold px-4 sm:px-6 py-2 sm:py-3 hover:bg-[#00b39a] transition-colors'>
                                         Add to Cart
                                     </button>
                                 </div>
