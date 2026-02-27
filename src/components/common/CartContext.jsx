@@ -6,7 +6,7 @@ export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([])
     const [cartCount, setCartCount] = useState(0)
 
-    // Load cart from localStorage on mount
+
     useEffect(() => {
         const savedCart = localStorage.getItem('cart')
         if (savedCart) {
@@ -20,16 +20,13 @@ export const CartProvider = ({ children }) => {
         }
     }, [])
 
-    // Save cart to localStorage whenever it changes
+
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cartItems))
         calculateCount(cartItems)
     }, [cartItems])
 
-    const calculateCount = (items) => {
-        const count = items.reduce((sum, item) => sum + item.quantity, 0)
-        setCartCount(count)
-    }
+ 
 
     const addToCart = (product) => {
         setCartItems(prevItems => {
