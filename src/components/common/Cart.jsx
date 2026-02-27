@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import Navbar from './common/Navbar';
-import Header from './common/Header';
+import Navbar from './Navbar';
+import Header from './Header';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {

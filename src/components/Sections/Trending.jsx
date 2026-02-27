@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
-import { Like, Star } from './common/Icon'
+import { Like, Star } from '../common/Icon'
+import { TrendingCards } from '../../Utilities/Data'
 
 const Trending = () => {
     const [liked, setLiked] = useState({})
@@ -11,13 +12,8 @@ const Trending = () => {
         setLiked(prev => ({ ...prev, [index]: !prev[index] }))
     }
 
-    const cards = [
-        { title: 'Ultra Shaping Leggings', image: '/assets/Trending (1).png', price: '€31.95', description: 'Sculpting, Slimming, Supportive, Stretchy, Stylish, Seamless', rating: 4 },
-        { title: 'Non-Slip Travel Yoga Mat', image: '/assets/Trending (2).png', price: '€31.95', description: 'Sculpting, Slimming, Supportive, Stretchy, Stylish, Seamless', rating: 4 },
-        { title: 'Foldable Yoga Mat', image: '/assets/Trending (3).png', price: '€31.95', description: 'Sculpting, Slimming, Supportive, Stretchy, Stylish, Seamless', rating: 4 },
-    ]
 
-    const allCards = [...cards, ...cards, ...cards]
+    const allTrendingCards = [...TrendingCards, ...TrendingCards, ...TrendingCards]
 
     const slide = (dir) => {
         if (isSliding.current) return
@@ -26,12 +22,12 @@ const Trending = () => {
         const next = dir === 'next' ? current + 1 : current - 1
         setCurrent(next)
         setTimeout(() => {
-            if (next >= cards.length * 2) {
+            if (next >= TrendingCards.length * 2) {
                 setTransitioning(false)
-                setCurrent(cards.length)
-            } else if (next < cards.length) {
+                setCurrent(TrendingCards.length)
+            } else if (next < TrendingCards.length) {
                 setTransitioning(false)
-                setCurrent(cards.length * 2 - 1)
+                setCurrent(TrendingCards.length * 2 - 1)
             }
             isSliding.current = false
         }, 400)
@@ -66,7 +62,7 @@ const Trending = () => {
                 </div>
             </div>
 
-            {/* Viewport */}
+        
             <div className='overflow-hidden w-full'>
                 <div
                     className='flex items-stretch'
@@ -76,13 +72,13 @@ const Trending = () => {
                         transition: transitioning ? 'transform 0.4s ease' : 'none',
                     }}
                 >
-                    {allCards.map((item, index) => (
+                    {allTrendingCards.map((item, index) => (
                         <div
                             key={index}
                             className='bg-white flex-shrink-0 p-3 flex flex-col border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow'
                             style={{ width: 'calc(100% / 3 - 1%)' }}
                         >
-                            {/* Image */}
+                       
                             <div className='relative bg-[#F5F5F5] w-full' style={{ paddingBottom: '75%' }}>
                                 <img
                                     src={item.image}
@@ -91,14 +87,14 @@ const Trending = () => {
                                 />
                                 <button
                                     className='absolute top-2 sm:top-3 right-2 sm:right-3 bg-white p-1.5 sm:p-2 rounded-full shadow-sm hover:scale-110 transition-transform z-10'
-                                    onClick={() => toggleLike(index % cards.length)}
+                                    onClick={() => toggleLike(index % TrendingCards.length)}
                                     aria-label='Toggle like'
                                 >
-                                    <Like isLiked={liked[index % cards.length]} />
+                                    <Like isLiked={liked[index % TrendingCards.length]} />
                                 </button>
                             </div>
 
-                            {/* Content */}
+                           
                             <div className='p-3 sm:p-4 flex flex-col gap-2 flex-1 justify-between'>
                                 <div>
                                     <h3 className='text-sm sm:text-base md:text-lg font-semibold text-black line-clamp-2'>{item.title}</h3>

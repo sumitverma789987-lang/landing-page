@@ -1,10 +1,5 @@
 import React from 'react'
-
-const cards = [
-    { date: 'May 25, 2025', title: 'Our Origins in Movement', image: '/assets/Blog (3).png', description: 'Rooted in France, Yogaova™ emerged from a desire to bring more style, sustainability....' },
-    { date: 'May 25, 2025', title: 'Our Origins in Movement', image: '/assets/Blog (2).png', description: 'Rooted in France, Yogaova™ emerged from a desire to bring more style, sustainability....' },
-    { date: 'May 25, 2025', title: 'Our Origins in Movement', image: '/assets/Blog (1).png', description: 'Rooted in France, Yogaova™ emerged from a desire to bring more style, sustainability....' },
-]
+import { BlogCards } from '../../Utilities/Data'
 
 const Blog = () => {
     return (
@@ -18,7 +13,7 @@ const Blog = () => {
             </div>
 
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 w-full'>
-                {cards.map((item, index) => (
+                {BlogCards.map((item, index) => (
                     <div key={index} className='flex flex-col  overflow-hidden hover:shadow-lg transition-shadow'>
 
                         <div className='h-40 sm:h-48 md:h-56 lg:h-64 overflow-hidden'>

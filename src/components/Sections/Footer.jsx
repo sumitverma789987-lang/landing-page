@@ -1,5 +1,5 @@
 import React from 'react'
-import { Arrow, Facebook, Linkedin, Twitter, Whitearrow, Youtube } from './common/Icon'
+import { Arrow, Facebook, Linkedin, Twitter, Whitearrow, Youtube } from '../common/Icon'
 
 const Footer = () => {
     return (

@@ -1,16 +1,10 @@
 import React, { useState } from 'react'
-import { Arrow } from './common/Icon'
-
+import { Arrow } from '../common/Icon'
+import { accordion } from '../../Utilities/Data'
 
 
 const Accordian = () => {
-    const accordion = [
-        { title: 'Our commitment to payment security', description: 'All direct payment gateways adhere to the standards set by PCI-DSS as managed by the PCI Security Standards Council, which is a joint effort of brands like Visa, MasterCard, American Express, and Discover.' },
-        { title: 'Our policy for returns and refunds', description: 'All direct payment gateways adhere to the standards set by PCI-DSS as managed by the PCI Security Standards Council, which is a joint effort of brands like Visa, MasterCard, American Express, and Discover.' },
-        { title: 'Product delivery times', description: 'All direct payment gateways adhere to the standards set by PCI-DSS as managed by the PCI Security Standards Council, which is a joint effort of brands like Visa, MasterCard, American Express, and Discover.' },
-        { title: 'Our warranty policy', description: 'All direct payment gateways adhere to the standards set by PCI-DSS as managed by the PCI Security Standards Council, which is a joint effort of brands like Visa, MasterCard, American Express, and Discover.' },
-
-    ]
+   
     const [activeIndex, setActiveIndex] = useState(0)
     const toggle = (i) => setActiveIndex(prev => prev === i ? null : i)
 

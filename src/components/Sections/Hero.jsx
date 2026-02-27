@@ -1,46 +1,17 @@
 import React, { useState, useEffect } from 'react'
-
+import { HeroSlides } from '../../Utilities/Data'
 const Hero = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
 
-    const slides = [
-        {
-            id: 1,
-            image: '/assets/First.png',
-            title: 'Nature - Inspired',
-            subtitle: 'ELEVATE YOUR PRATICE',
-            description: 'Eco-friendly yoga mats that blend-high performance with stunning, nature-inspired designs. Each product is thoughtfully crafted to elevate your yoga practice.'
-        },
-        {
-            id: 2,
-            image: '/assets/Second.png',
-            title: 'Nature - Inspired',
-            subtitle: 'ELEVATE YOUR PRATICE',
-            description: 'Eco-friendly yoga mats that blend-high performance with stunning, nature-inspired designs. Each product is thoughtfully crafted to elevate your yoga practice.'
-        },
-        {
-            id: 3,
-            image: '/assets/Third.png',
-            title: 'Nature - Inspired',
-            subtitle: 'ELEVATE YOUR PRATICE',
-            description: 'Eco-friendly yoga mats that blend-high performance with stunning, nature-inspired designs. Each product is thoughtfully crafted to elevate your yoga practice.'
-        },
-        {
-            id: 4,
-            image: '/assets/Fourth.jpg',
-            title: 'Nature - Inspired',
-            subtitle: 'ELEVATE YOUR PRATICE',
-            description: 'Eco-friendly yoga mats that blend-high performance with stunning, nature-inspired designs. Each product is thoughtfully crafted to elevate your yoga practice.'
-        }
-    ]
+   
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentSlide((prev) => (prev + 1) % slides.length)
+            setCurrentSlide((prev) => (prev + 1) % HeroSlides.length)
         }, 5000)
 
         return () => clearInterval(interval)
-    }, [slides.length])
+    }, [HeroSlides.length])
 
 
 
@@ -48,7 +19,7 @@ const Hero = () => {
 
         <div className='w-full max-w-[1440px] h-[787px] mx-auto'>
             <div className='relative w-full h-full'>
-                {slides.map((slide, index) => (
+                {HeroSlides.map((slide, index) => (
                     <div
                         key={slide.id}
                         className={`z-10 bg-cover bg-center absolute w-full h-full transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'

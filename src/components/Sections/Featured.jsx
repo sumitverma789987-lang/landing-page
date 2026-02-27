@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
-import { Like } from './common/Icon';
+import { Like } from '../common/Icon';
+import { FeatureCards } from '../../Utilities/Data';
 
 const Featured = () => {
     const [liked, setLiked] = useState({})
@@ -18,13 +19,8 @@ const Featured = () => {
         localStorage.setItem('cart', JSON.stringify(existingCart))
     }
 
-    const cards = [
-        { title: 'Round Yoga Mat', image: '/assets/Matt1.png', price: '€31.95' },
-        { title: 'Non-Slip Travel Yoga Mat', image: '/assets/Matt2.png', price: '€31.95' },
-        { title: 'Foldable Yoga Mat', image: '/assets/Matt3.png', price: '€31.95' },
-    ]
 
-    const allCards = [...cards, ...cards, ...cards]
+    const allFeatureCards = [...FeatureCards, ...FeatureCards, ...FeatureCards]
 
     const slide = (dir) => {
         if (isSliding.current) return
@@ -35,12 +31,12 @@ const Featured = () => {
         setCurrent(next)
 
         setTimeout(() => {
-            if (next >= cards.length * 2) {
+            if (next >= FeatureCards.length * 2) {
                 setTransitioning(false)
-                setCurrent(cards.length)
-            } else if (next < cards.length) {
+                setCurrent(FeatureCards.length)
+            } else if (next < FeatureCards.length) {
                 setTransitioning(false)
-                setCurrent(cards.length * 2 - 1)
+                setCurrent(FeatureCards.length * 2 - 1)
             }
             isSliding.current = false
         }, 400)
@@ -85,7 +81,7 @@ const Featured = () => {
                         transition: transitioning ? 'transform 0.4s ease' : 'none',
                     }}
                 >
-                    {allCards.map((item, index) => (
+                    {allFeatureCards.map((item, index) => (
                         <div
                             key={index}
                             className='bg-[#F5F5F5] flex-shrink-0 flex flex-col cursor-pointer hover:shadow-lg transition-shadow relative group overflow-hidden'
@@ -99,10 +95,10 @@ const Featured = () => {
            
                             <button
                                 className='absolute top-2 sm:top-3 md:top-4 right-2 sm:right-3 md:right-4 bg-white p-1.5 sm:p-2 rounded-full shadow-sm hover:scale-110 transition-transform z-10'
-                                onClick={() => toggleLike(index % cards.length)}
+                                onClick={() => toggleLike(index % FeatureCards.length)}
                                 aria-label='Toggle like'
                             >
-                                <Like isLiked={liked[index % cards.length]} />
+                                <Like isLiked={liked[index % FeatureCards.length]} />
                             </button>
 
                             <div className='relative flex items-center justify-center flex-1 min-h-[180px] sm:min-h-[240px] md:min-h-[320px] p-4 sm:p-6 md:p-10'>
