@@ -21,10 +21,10 @@ const Categories = () => {
         <div className='flex flex-col items-center max-w-[1440px] mx-auto justify-center w-full lg:mt-[140px] mt-20 lg:px-35 px-5'>
             <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between w-full mb-8 sm:mb-10 md:mb-12 gap-4 sm:gap-0'>
                 <div className='flex flex-col items-start justify-center'>
-                    <h4 className='font-[var(--font-semibold)] text-[48px]'>Shop Our Categories</h4>
-                    <p className='font-[var(--font-normal)] text-20px text-[var(--gray)] mt-1 sm:mt-2'>Use this area to describe the collection.</p>
+                    <h4 className='font-[var(--font-semibold)] text-[var(--text-24)] md:text-[var(--text-48)] lg:text-[var(--text-48)]'>Shop Our Categories</h4>
+                    <p className='font-[var(--font-normal)] text-[var(--text-14)] md:text-[var(--text-18)] lg:text-[var(--text-20)] text-[var(--gray)] mt-1 sm:mt-2'>Use this area to describe the collection.</p>
                 </div>
-                <button className='flex items-center justify-center px-4 sm:px-6 md:px-8 text-20px font-[var(--font-medium)] py-3 sm:py-4 md:py-4 bg-[var(--teal)] text-white cursor-pointer hover:bg-[#00b39a] transition-colors whitespace-nowrap'>
+                <button className='flex items-center justify-center px-4 sm:px-6 md:px-8 text-[var(--text-14)] md:text-[var(--text-18)] lg:text-[var(--text-20)] font-[var(--font-medium)] py-3 sm:py-4 md:py-4 bg-[var(--teal)] text-white cursor-pointer hover:bg-[#00b39a] transition-colors whitespace-nowrap'>
                     View all
                 </button>
             </div>
@@ -35,7 +35,7 @@ const Categories = () => {
                         className='bg-[#F5F5F5] flex flex-col cursor-pointer relative group overflow-hidden shadow-sm hover:shadow-md transition-shadow'
                     >
                         {item.sale && (
-                            <div className='absolute top-2 sm:top-3 left-2 sm:left-3 bg-[var(--teal)] text-white text-sm font-[var(--font-semibold)] px-2 sm:px-3 py-1 z-10 rounded'>
+                            <div className='absolute top-2 sm:top-3 left-2 sm:left-3 bg-[var(--teal)] text-white text-[var(--text-14)] md:text-[var(--text-14)] lg:text-[var(--text-14)] font-[var(--font-semibold)] px-2 sm:px-3 py-1 z-10 rounded'>
                                 Sale
                             </div>
                         )}
@@ -53,14 +53,14 @@ const Categories = () => {
                                 alt={item.title}
                             />
                             <div className='absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center'>
-                                <button className='bg-[var(--teal)] cursor-pointer text-white text-[16px] font-[var(--font-semibold)] px-4 sm:px-6 py-2 sm:py-3 hover:bg-[#00b39a] transition-colors' onClick={() => addToCart(item)}>
+                                <button className='bg-[var(--teal)] cursor-pointer text-white text-[var(--text-14)] md:text-[var(--text-16)] lg:text-[var(--text-16)] font-[var(--font-semibold)] px-4 sm:px-6 py-2 sm:py-3 hover:bg-[#00b39a] transition-colors' onClick={() => addToCart(item)}>
                                     Add to Cart
                                 </button>
                             </div>
                         </div>
                         <div className='bg-white flex flex-row items-center justify-between px-3 sm:px-4 py-2 sm:py-3 gap-2'>
-                            <h3 className='text-[16px] font-[var(--font-normal)] text-black flex-1 truncate'>{item.title}</h3>
-                            <span className='text-[16px] font-[var(--font-normal)] text-black flex-shrink-0'>{item.price}</span>
+                            <h3 className='text-[var(--text-14)] md:text-[var(--text-16)] lg:text-[var(--text-16)] font-[var(--font-normal)] text-black flex-1 truncate'>{item.title}</h3>
+                            <span className='text-[var(--text-14)] md:text-[var(--text-16)] lg:text-[var(--text-16)] font-[var(--font-normal)] text-black flex-shrink-0'>{item.price}</span>
                         </div>
                     </div>
                 ))}

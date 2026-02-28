@@ -36,8 +36,8 @@ const Trending = () => {
         <div className='flex flex-col items-center max-w-[1440px] mx-auto justify-center w-full mt-[140px] lg:px-35 px-5'>
             <div className='flex flex-row items-center justify-between w-full gap-4 sm:gap-0 mb-[50px]'>
                 <div className='flex flex-col items-start justify-center'>
-                    <h4 className='font-[var(--font-semibold)] text-[24px] sm:text-[30px]  lg:text-[48px]'>Trending Products</h4>
-                    <p className='font-[var(--font-normal)] text-[16px]  text-[var(--gray)] mt-1 sm:mt-2'>Use this area to describe the collection.</p>
+                    <h4 className='font-[var(--font-semibold)] text-[var(--text-24)] md:text-[var(--text-48)] lg:text-[var(--text-48)]'>Trending Products</h4>
+                    <p className='font-[var(--font-normal)] text-[var(--text-14)] md:text-[var(--text-16)] lg:text-[var(--text-16)] text-[var(--gray)] mt-1 sm:mt-2'>Use this area to describe the collection.</p>
                 </div>
                 <div className='flex flex-row items-center justify-center gap-2 sm:gap-3 md:gap-5'>
                     <button
@@ -93,18 +93,18 @@ const Trending = () => {
 
                             <div className='p-3 sm:p-4 flex flex-col gap-2 flex-1 justify-between'>
                                 <div>
-                                    <h3 className='text-[16px]  font-[var(--font-semibold)] text-black line-clamp-2'>{item.title}</h3>
-                                    <p className='text-xs sm:text-[16px] font-[var(--font-normal)] text-[var(--gray)] line-clamp-2'>{item.description}</p>
+                                    <h3 className='text-[var(--text-14)] md:text-[var(--text-16)] lg:text-[var(--text-16)] font-[var(--font-semibold)] text-black line-clamp-2'>{item.title}</h3>
+                                    <p className='text-[var(--text-14)] md:text-[var(--text-14)] lg:text-[var(--text-16)] font-[var(--font-normal)] text-[var(--gray)] line-clamp-2'>{item.description}</p>
                                 </div>
 
                                 <div className='flex items-center justify-between mt-2'>
-                                    <span className='text-[20px] font-[var(--font-semibold)] text-black'>{item.price}</span>
+                                    <span className='text-[var(--text-16)] md:text-[var(--text-18)] lg:text-[var(--text-20)] font-[var(--font-semibold)] text-black'>{item.price}</span>
                                     <div className='flex flex-row gap-0.5'>
                                         <Star /><Star /><Star /><Star />
                                     </div>
                                 </div>
 
-                                <button className="mt-2 w-full py-2 sm:py-3 text-xs sm:text-[16px] md:text-base font-[var(--font-medium)] border bg-white hover:bg-[var(--teal)] hover:text-white rounded transition-colors">
+                                <button className='mt-2 w-full py-2 sm:py-3 text-[var(--text-14)] md:text-[var(--text-16)] lg:text-[var(--text-16)] font-[var(--font-medium)] border bg-white hover:bg-[var(--teal)] hover:text-white rounded transition-colors'>
                                     Shop Now
                                 </button>
                             </div>

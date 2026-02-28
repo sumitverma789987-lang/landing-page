@@ -13,17 +13,18 @@ const Navbar = () => {
                     </Link>
                 </div>
 
+           
                 <div className='hidden md:flex items-center gap-11 justify-center flex-row'>
                     <Link to="/">
-                        <button className='hover:scale-115 text-[var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
+                        <button className='hover:scale-115 text-[var(--text-14)] lg:text-[var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
                             Home
                         </button>
                     </Link>
-                    <button className='hover:scale-115 text-[var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
+                    <button className='hover:scale-115 text-[var(--text-14)] lg:text-[var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
                         Contact
                     </button>
                     <Link to="/cart">
-                        <button className='hover:scale-115 text-[var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
+                        <button className='hover:scale-115 text-[var(--text-14)] lg:text-[var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
                             Cart
                         </button>
                     </Link>
