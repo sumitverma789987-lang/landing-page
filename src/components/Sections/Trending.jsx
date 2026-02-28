@@ -1,12 +1,30 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Like, Star } from '../common/Icon'
 import { TrendingCards } from '../../Utilities/Data'
 
 const Trending = () => {
     const [liked, setLiked] = useState({})
-    const [current, setCurrent] = useState(3)
+    const [current, setCurrent] = useState(TrendingCards.length)
     const [transitioning, setTransitioning] = useState(true)
+    const [cardsPerView, setCardsPerView] = useState(3)
+
     const isSliding = useRef(false)
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 1280) {
+                setCardsPerView(3)
+            } else if (window.innerWidth >= 1024) {
+                setCardsPerView(2)
+            } else {
+                setCardsPerView(2)
+            }
+        }
+
+        handleResize()
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
 
     const toggleLike = (index) => {
         setLiked(prev => ({ ...prev, [index]: !prev[index] }))
@@ -18,8 +36,10 @@ const Trending = () => {
         if (isSliding.current) return
         isSliding.current = true
         setTransitioning(true)
+
         const next = dir === 'next' ? current + 1 : current - 1
         setCurrent(next)
+
         setTimeout(() => {
             if (next >= TrendingCards.length * 2) {
                 setTransitioning(false)
@@ -36,8 +56,8 @@ const Trending = () => {
         <div className='flex flex-col items-center max-w-[1440px] mx-auto justify-center w-full mt-[140px] lg:px-35 px-5'>
             <div className='flex flex-row items-center justify-between w-full gap-4 sm:gap-0 mb-[50px]'>
                 <div className='flex flex-col items-start justify-center'>
-                    <h4 className='font-[var(--font-semibold)] text-[var(--text-24)] md:text-[var(--text-48)] lg:text-[var(--text-48)]'>Trending Products</h4>
-                    <p className='font-[var(--font-normal)] text-[var(--text-14)] md:text-[var(--text-16)] lg:text-[var(--text-16)] text-[var(--gray)] mt-1 sm:mt-2'>Use this area to describe the collection.</p>
+                    <h4 className='font-[var(--font-semibold)] [font-size:var(--text-24)] md:[font-size:var(--text-48)] lg:[font-size:var(--text-48)]'>Trending Products</h4>
+                    <p className='font-[var(--font-normal)] [font-size:var(--text-14)] md:[font-size:var(--text-16)] lg:[font-size:var(--text-16)] text-[var(--gray)] mt-1 sm:mt-2'>Use this area to describe the collection.</p>
                 </div>
                 <div className='flex flex-row items-center justify-center gap-2 sm:gap-3 md:gap-5'>
                     <button
@@ -66,7 +86,7 @@ const Trending = () => {
                     className='flex items-stretch'
                     style={{
                         gap: '1.5%',
-                        transform: `translateX(calc(-${current} * (100% / 3 + 0.5%)))`,
+                        transform: `translateX(-${current * (100 / cardsPerView)}%)`,
                         transition: transitioning ? 'transform 0.4s ease' : 'none',
                     }}
                 >
@@ -74,7 +94,7 @@ const Trending = () => {
                         <div
                             key={index}
                             className='bg-white flex-shrink-0 p-3 flex flex-col border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow'
-                            style={{ width: 'calc(100% / 3 - 1%)' }}
+                            style={{ width: `${100 / cardsPerView}%` }}
                         >
                             <div className='relative bg-[#F5F5F5] w-full' style={{ paddingBottom: '75%' }}>
                                 <img
@@ -93,18 +113,18 @@ const Trending = () => {
 
                             <div className='p-3 sm:p-4 flex flex-col gap-2 flex-1 justify-between'>
                                 <div>
-                                    <h3 className='text-[var(--text-14)] md:text-[var(--text-16)] lg:text-[var(--text-16)] font-[var(--font-semibold)] text-black line-clamp-2'>{item.title}</h3>
-                                    <p className='text-[var(--text-14)] md:text-[var(--text-14)] lg:text-[var(--text-16)] font-[var(--font-normal)] text-[var(--gray)] line-clamp-2'>{item.description}</p>
+                                    <h3 className='[font-size:var(--text-14)] md:[font-size:var(--text-16)] lg:[font-size:var(--text-16)] font-[var(--font-semibold)] text-black line-clamp-2'>{item.title}</h3>
+                                    <p className='[font-size:var(--text-14)] md:[font-size:var(--text-14)] lg:[font-size:var(--text-16)] font-[var(--font-normal)] text-[var(--gray)] line-clamp-2'>{item.description}</p>
                                 </div>
 
                                 <div className='flex items-center justify-between mt-2'>
-                                    <span className='text-[var(--text-16)] md:text-[var(--text-18)] lg:text-[var(--text-20)] font-[var(--font-semibold)] text-black'>{item.price}</span>
+                                    <span className='[font-size:var(--text-16)] md:[font-size:var(--text-18)] lg:[font-size:var(--text-20)] font-[var(--font-semibold)] text-black'>{item.price}</span>
                                     <div className='flex flex-row gap-0.5'>
                                         <Star /><Star /><Star /><Star />
                                     </div>
                                 </div>
 
-                                <button className='mt-2 w-full py-2 sm:py-3 text-[var(--text-14)] md:text-[var(--text-16)] lg:text-[var(--text-16)] font-[var(--font-medium)] border bg-white hover:bg-[var(--teal)] hover:text-white rounded transition-colors'>
+                                <button className='mt-2 w-full py-2 sm:py-3 [font-size:var(--text-14)] md:[font-size:var(--text-16)] lg:[font-size:var(--text-16)] font-[var(--font-medium)] border bg-white hover:bg-[var(--teal)] hover:text-white rounded transition-colors'>
                                     Shop Now
                                 </button>
                             </div>

@@ -13,18 +13,17 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-           
                 <div className='hidden md:flex items-center gap-11 justify-center flex-row'>
                     <Link to="/">
-                        <button className='hover:scale-115 text-[var(--text-14)] lg:text-[var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
+                        <button className='hover:scale-115 [font-size:var(--text-14)] md:[font-size:var(--text-14)] lg:[font-size:var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
                             Home
                         </button>
                     </Link>
-                    <button className='hover:scale-115 text-[var(--text-14)] lg:text-[var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
+                    <button className='hover:scale-115 [font-size:var(--text-14)] md:[font-size:var(--text-14)] lg:[font-size:var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
                         Contact
                     </button>
                     <Link to="/cart">
-                        <button className='hover:scale-115 text-[var(--text-14)] lg:text-[var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
+                        <button className='hover:scale-115 [font-size:var(--text-14)] md:[font-size:var(--text-14)] lg:[font-size:var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
                             Cart
                         </button>
                     </Link>
@@ -41,15 +40,15 @@ const Navbar = () => {
 
                 <div className={`fixed md:hidden top-0 right-0 h-screen w-64 bg-[var(--teal)] flex flex-col items-center gap-8 pt-20 z-50 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <Link to="/" onClick={() => setIsOpen(false)}>
-                        <button className='hover:scale-115 text-[var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
+                        <button className='hover:scale-115 [font-size:var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
                             Home
                         </button>
                     </Link>
-                    <button className='hover:scale-115 text-[var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
+                    <button className='hover:scale-115 [font-size:var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
                         Contact
                     </button>
                     <Link to="/cart" onClick={() => setIsOpen(false)}>
-                        <button className='hover:scale-115 text-[var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
+                        <button className='hover:scale-115 [font-size:var(--text-16)] font-[var(--font-normal)] cursor-pointer transition-all ease-in-out duration-200'>
                             Cart
                         </button>
                     </Link>

@@ -26,12 +26,12 @@ const Hero = () => {
                             style={{ background: 'linear-gradient(90.64deg, rgba(0, 0, 0, 0.65) 5.47%, rgba(0, 0, 0, 0) 95.31%)' }}
                         />
                         <div className='relative z-20 text-white h-full flex flex-col items-start justify-center lg:px-35 px-5'>
-                            <h1 className='tracking-widest text-[var(--text-14)] md:text-[var(--text-16)] lg:text-[var(--text-16)] font-[var(--font-normal)]'>{slide.subtitle}</h1>
-                            <h1 className='text-[var(--text-48)] md:text-[var(--text-60)] lg:text-[var(--text-66)] font-[var(--font-bold)] tracking-tight my-4'>{slide.title}</h1>
-                            <h1 className='font-[var(--font-normal)] text-[var(--text-14)] md:text-[var(--text-16)] lg:text-[var(--text-18)] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-2xl leading-relaxed'>
+                            <h1 className='tracking-widest [font-size:var(--text-14)] md:[font-size:var(--text-16)] lg:[font-size:var(--text-16)] font-[var(--font-normal)]'>{slide.subtitle}</h1>
+                            <h1 className='[font-size:var(--text-48)] md:[font-size:var(--text-60)] lg:[font-size:var(--text-66)] font-[var(--font-bold)] tracking-tight my-4'>{slide.title}</h1>
+                            <h1 className='font-[var(--font-normal)] [font-size:var(--text-14)] md:[font-size:var(--text-16)] lg:[font-size:var(--text-18)] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-2xl leading-relaxed'>
                                 {slide.description}
                             </h1>
-                            <button className='bg-[var(--teal)] px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-3.5 text-[var(--text-14)] md:text-[var(--text-16)] lg:text-[var(--text-16)] font-[var(--font-medium)] mt-6 hover:bg-[#00b39a] transition-colors'>Shop now</button>
+                            <button className='bg-[var(--teal)] px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-3.5 [font-size:var(--text-14)] md:[font-size:var(--text-16)] lg:[font-size:var(--text-16)] font-[var(--font-medium)] mt-6 hover:bg-[#00b39a] transition-colors'>Shop now</button>
                         </div>
                     </div>
                 ))}

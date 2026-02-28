@@ -7,13 +7,7 @@ const Header = () => {
         <div className='w-full flex max-w-[1440px] mx-auto flex-row items-center justify-between p-3 px-5 lg:px-35'>
             <div className='flex items-center justify-center flex-row gap-3'>
                 <Free />
-                <p className='
-                    text-[var(--text-12)] 
-                    md:text-[var(--text-14)] 
-                    lg:text-[var(--text-16)] 
-                    font-[var(--font-normal)] 
-                    text-[var(--gray)]
-                '>
+                <p className='[font-size:var(--text-14)] md:[font-size:var(--text-14)] lg:[font-size:var(--text-16)] font-[var(--font-normal)] text-[var(--gray)]'>
                     Free delivery & free returns within 15 days
                 </p>
             </div>
